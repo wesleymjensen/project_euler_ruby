@@ -96,6 +96,16 @@ class StdClass
 		print "Problem 5: #{a}\n"
 		
 	end
+	def function6
+		sum_sq = 0
+		sq_sum = 0
+		for i in (1..100)
+			sq_sum += i*i
+			sum_sq += i
+		end
+		sum_sq *= sum_sq
+		print "Problem 6: #{sum_sq-sq_sum}\n"
+	end
 	
 		
 end
@@ -105,4 +115,5 @@ x = StdClass.new
 #x.function2
 #x.function3
 #x.function4
-x.function5
+#x.function5
+x.function6
