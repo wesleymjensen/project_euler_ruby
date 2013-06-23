@@ -57,7 +57,26 @@ class StdClass
 	end
 	def function3
 		sum = largestPrimeFactor(600851475143, 2)
-		print "Problem3: #{sum}\n"
+		print "Problem 3: #{sum}\n"
+	end
+	def function4
+		a = 100
+		b = 100
+		product = 0
+		final = 0
+		for i in (a..999)
+			for j in (b..999)
+				product = a*b
+				string = product.to_s()
+				if ((string[0..string.size()/2-1].eql? string[string.size()/2..string.size()].reverse) && product > final)
+					final = product
+				end
+				b+=1
+			end
+			a+=1
+			b=a
+		end
+		print "Problem 4: #{final}\n"
 	end
 	
 		
@@ -67,3 +86,4 @@ x = StdClass.new
 x.function1
 x.function2
 x.function3
+x.function4
