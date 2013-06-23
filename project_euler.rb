@@ -78,12 +78,31 @@ class StdClass
 		end
 		print "Problem 4: #{final}\n"
 	end
+	def function5
+		a = 20
+		b = Array(1..20)
+		found = 0
+		while found < 20
+			for i in (1..20)
+				if a%b[i-1] == 0
+					found += 1
+				end
+			end
+			if found < 20
+				found = 0
+				a+=20
+			end			
+		end
+		print "Problem 5: #{a}\n"
+		
+	end
 	
 		
 end
 
 x = StdClass.new
-x.function1
-x.function2
-x.function3
-x.function4
+#x.function1
+#x.function2
+#x.function3
+#x.function4
+#x.function5
