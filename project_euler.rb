@@ -105,4 +105,4 @@ x = StdClass.new
 #x.function2
 #x.function3
 #x.function4
-#x.function5
+x.function5
