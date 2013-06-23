@@ -18,24 +18,18 @@
 #  MA 02110-1301, USA.
 #  
 #  
-module Tools
-  class Base
-    def self.largestPrimeFactor(num, i)
+
+
+
+class StdClass 
+	def largestPrimeFactor(num, i)
 		if i==num/2
 			return num
 		elsif num%i==0
-			return function3(num/i, 2)
+			return largestPrimeFactor(num/i, 2)
 		else
-			return function3(num, i+1)
+			return largestPrimeFactor(num, i+1)
 		end	
-	end
-  end
-end
-
-
-class StdClass < Tools::Base
-	def initialize
-		
 	end
 	def function1
 		sum = 0
@@ -62,7 +56,7 @@ class StdClass < Tools::Base
 		print "Problem 2: #{sum}\n"
 	end
 	def function3
-		sum = largestPrimeFactor (600851475143 2)
+		sum = largestPrimeFactor(600851475143, 2)
 		print "Problem3: #{sum}\n"
 	end
 	
