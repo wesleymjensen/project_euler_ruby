@@ -106,6 +106,26 @@ class StdClass
 		sum_sq *= sum_sq
 		print "Problem 6: #{sum_sq-sq_sum}\n"
 	end
+	def function7
+		count = 1
+		results = [2]
+		next_num = 1
+		prime = true
+		while count < 10001
+			next_num+=2
+			for i in (0..results.size()-1)
+				if next_num%results[i] == 0
+					prime = false
+				end
+			end
+			if prime
+				count+=1
+				results.push(next_num)
+			end
+			prime=true
+		end
+		print "Problem 7: #{next_num}\n"
+	end
 	
 		
 end
@@ -116,4 +136,5 @@ x = StdClass.new
 #x.function3
 #x.function4
 #x.function5
-x.function6
+#x.function6
+x.function7
